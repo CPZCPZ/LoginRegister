@@ -1,0 +1,30 @@
+﻿<Window x:Class="LoginRegiser.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LoginRegiser"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" FontFamily="STHupo" KeyDown="Window_KeyDown">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                <GradientStop Color="#FFFFFFFF" Offset="0"></GradientStop>
+                <GradientStop Color="#FF000000" Offset="1"></GradientStop>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Border Height="390" VerticalAlignment="Top" CornerRadius="140 140 0 140" Background="#100E17" MouseDown="Border_MouseDown"/>
+        <StackPanel HorizontalAlignment="Left" Height="139" VerticalAlignment="Top" Width="800">
+            <Button x:Name="btnExit" Content="X" FontSize="50" Width="50" Height="50" HorizontalAlignment="Right" Margin="0, 20 20, 0" Background="Transparent" Foreground="White" Click="btnExit_Click"></Button>
+            <TextBlock TextWrapping="Wrap" Text="Login" FontFamily="STHupo" FontSize="40" FontWeight="Bold" Foreground="White" Height="45" Margin="30,0,30,0" TextAlignment="Center"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="246" Margin="0,144,0,0" VerticalAlignment="Top" Width="800" >
+            <TextBox x:Name="tbUsername" FontFamily="STHupo" Height="30" TextWrapping="Wrap" FontSize="35" Text="Username" Background="Transparent" VerticalAlignment="Top" Margin="200, 20, 200, 20" BorderBrush="Transparent" Foreground="White" GotFocus="tbUsername_GotFocus"/>
+            <PasswordBox x:Name="tbPassword" Height="30" Password="********" FontSize="25" Background="Transparent" VerticalAlignment="Top" Margin="200, 0, 200, 20" BorderBrush="Transparent" Foreground="White" GotFocus="tbPassword_GotFocus"/>
+            <StackPanel VerticalAlignment="Top" Height="121" Orientation="Horizontal">
+                <Button x:Name="btnLogin" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" HorizontalAlignment="Center" Foreground="White" Height="50" Width="150" Background="Transparent" Margin="200, 0, 100, 0" Content="Login" Click="btnLogin_Click"></Button>
+                <Button x:Name="btnRegister" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" HorizontalAlignment="Center" Height="50" Width="150" Background="Transparent" Foreground="White" Content="Register" Click="btnRegister_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
